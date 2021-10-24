@@ -16,7 +16,7 @@
     <div class="nav">
       <img src="one.jpg" class="logo" />
       <h2 class="logotext">text here</h2>
-      <h4 class="timetext">data and time</h4 class="timetext">
+      <h4 class="timetext" id="id01">data and time</h4 class="timetext">
     </div>
     <div class="login">
       <h2 class="active">sign in</h2>
@@ -40,5 +40,17 @@
     <div class="footer" >
         <h3>Copyright &copy;</h3>
     </div>
+    <script >
+        var today = new Date();
+        const element = document.getElementById("id01");
+        
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        element.innerHTML = date + ' ' + time + ' ' ;
+
+
+
+
+    </script>
   </body>
 </html>
