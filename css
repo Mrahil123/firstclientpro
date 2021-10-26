@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  background-color: rgba(255, 198, 198, 0.5);
+  align-items: center;
+  padding: 10px;
+  justify-content:space-between
+}
+.main {
+        padding: 9px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .box {
+        padding: 9px;
+        width: 100px;
+        background-color: #232af3;
+        border-radius: 9px;
+      } ul {
+        display: flex;
+      }
+      ul li {
+        padding: 5px;
+        list-style: none;
+      }
