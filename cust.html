@@ -3,231 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
-  <body>
-    <h2>HEAPER</h2>
-    <div class="table-wrapper">
-      <div id="con">
-        <div id="inputmakes">
-          <input type="text" placeholder="NAME" />
-          <input type="text" placeholder="NUMBER" />
-          <input type="text" placeholder="BALANCE" />
-          <input type="text" placeholder="ADVANCE" />
+  <body class="bg-blue-200">
+    <h2 class="bg-blue-500 font-bold align-middle text-center w-full text-4xl">
+      HEAPER
+    </h2>
+    <div class="p-1">
+      <div class="mb-9 mt-10 bg-blue-300 flex flex-col p-5 w-[50px]">
+        <div class="mx-w-full my-2">
+          <input class="mb-1 w-full" type="text" placeholder="NAME" />
+          <input class="mb-1 w-full" type="text" placeholder="NUMBER" />
+          <input class="mb-1 w-full" type="text" placeholder="BALANCE" />
+          <input class="mb-1 w-full" type="text" placeholder="ADVANCE" />
         </div>
-        <button id="addcust">ADD CUST</button>
+        <button class="bg-blue-500 font-bold">ADD CUST</button>
       </div>
-      <table class="fl-table">
-        <thead>
-          <tr>
-            <th>SR No</th>
-            <th>CUST NAME</th>
-            <th>CNO</th>
-            <th>PB</th>
-            <th>AD</th>
-            <th>ACTION</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>
-              <button class="edit">EDIT</button
-              ><button class="delete">DELETE</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>
-              <button class="edit">EDIT</button
-              ><button class="delete">DELETE</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>Content 1</td>
-            <td>
-              <button class="edit">EDIT</button
-              ><button class="delete">DELETE</button>
-            </td>
-          </tr>
-        </tbody>
-
-        <tbody></tbody>
-      </table>
+      <div class="bg-blue-100 w-full lg:p-9">
+        <table class="overflow-x-scroll m-auto w-full">
+          <thead class="bg-red-500 text-white">
+            <tr>
+              <th class="p-1">SR No</th>
+              <th>CUST NAME</th>
+              <th>CNO</th>
+              <th>PB</th>
+              <th>AD</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody class="text-center font-medium bg-green-200">
+            <tr>
+              <td class="p-2">Content 1</td>
+              <td>Content 1</td>
+              <td>Content 1</td>
+              <td>Content 1</td>
+              <td>Content 1</td>
+              <td>
+                <button class="bg-yellow-300 mr-1 p-1 font-semibold">
+                  EDIT</button
+                ><button class="bg-red-300 mr-1 p-1 font-semibold">
+                  DELETE
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <style>
-      * {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-      }
-      body {
-        font-family: Helvetica;
-        -webkit-font-smoothing: antialiased;
-        background: rgba(71, 147, 227, 1);
-      }
-      h2 {
-        text-align: center;
-        font-size: 18px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: white;
-        padding: 30px 0;
-        background-color: #235d97;
-      }
-
-      /* Table Styles */
-
-      .table-wrapper {
-        margin: 10px 70px 70px;
-        box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-      }
-
-      .fl-table {
-        border-radius: 5px;
-        font-size: 12px;
-        font-weight: normal;
-        border: none;
-        border-collapse: collapse;
-        width: 100%;
-        max-width: 100%;
-        white-space: nowrap;
-        background-color: white;
-      }
-
-      .fl-table td,
-      .fl-table th {
-        text-align: center;
-        padding: 8px;
-      }
-
-      .fl-table td {
-        border-right: 1px solid #f8f8f8;
-        font-size: 12px;
-      }
-
-      .fl-table thead th {
-        color: #ffffff;
-        background: #070707;
-      }
-
-      .fl-table thead th:nth-child(odd) {
-        color: #ffffff;
-        background: #0e0e0e;
-      }
-
-      .fl-table tr:nth-child(even) {
-        background: #f8f8f8;
-      }
-
-      /* Responsive */
-
-      @media (max-width: 767px) {
-        .fl-table {
-          display: block;
-          width: 100%;
-        }
-        .table-wrapper:before {
-          content: "Scroll horizontally >";
-          display: block;
-          text-align: right;
-          font-size: 11px;
-          color: white;
-          padding: 0 0 10px;
-        }
-        .fl-table thead,
-        .fl-table tbody,
-        .fl-table thead th {
-          display: block;
-        }
-        .fl-table thead th:last-child {
-          border-bottom: none;
-        }
-        .fl-table thead {
-          float: left;
-        }
-        .fl-table tbody {
-          width: auto;
-          position: relative;
-          overflow-x: auto;
-        }
-        .fl-table td,
-        .fl-table th {
-          padding: 20px 0.625em 0.625em 0.625em;
-          height: 60px;
-          vertical-align: middle;
-          box-sizing: border-box;
-          overflow-x: hidden;
-          overflow-y: auto;
-          width: 120px;
-          font-size: 13px;
-          text-overflow: ellipsis;
-        }
-        .fl-table thead th {
-          text-align: left;
-          border-bottom: 1px solid #f7f7f9;
-        }
-        .fl-table tbody tr {
-          display: table-cell;
-        }
-        .fl-table tbody tr:nth-child(odd) {
-          background: none;
-        }
-        .fl-table tr:nth-child(even) {
-          background: transparent;
-        }
-        .fl-table tr td:nth-child(odd) {
-          background: #f8f8f8;
-          border-right: 1px solid #e6e4e4;
-        }
-        .fl-table tr td:nth-child(even) {
-          border-right: 1px solid #e6e4e4;
-        }
-        .fl-table tbody td {
-          display: block;
-          text-align: center;
-        }
-      }
-      #inputmakes {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      #addcust {
-        width: 100%;
-        height: 36px;
-        background-color: rgb(52, 240, 90);
-        margin-top: 5px;
-        color: rgb(255, 255, 255);
-        border-radius: 8px;
-      }
-      #con {
-        margin-bottom: 25px;
-        width: 60%;
-        margin-left: 40%;
-      }
-      tr td .edit {
-        background-color: #0bcefa;
-        color: #1f2021;
-        margin-right: 30px;
-      }
-      tr td .delete {
-        background-color: #fa0b0b;
-        color: #ebf0f5;
-        margin: auto;
-      }
-    </style>
   </body>
 </html>
